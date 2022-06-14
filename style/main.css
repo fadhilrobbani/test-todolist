@@ -1,0 +1,35 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: rgb(205, 230, 230);
+}
+
+h1{
+    text-align: center;
+    color: rgb(222, 142, 142);
+}
+
+#new-task-form{
+    display: flex;
+    justify-content: center;
+}
+
+#new-task-input{
+   margin: 0px 10px 0px 10px;
+   border-radius: 0%;
+   border: none;
+   color:white;
+   background-color: rgb(7, 119, 167);
+   height: 3em;
+   width: 20em;
+
+}
+
+::placeholder{
+    color: rgb(187, 194, 200);
+}
+
+section.task-list{
+    
+}
