@@ -1,13 +1,32 @@
+:root{
+    --background: rgb(61, 78, 91);
+    --gray:rgb(184, 184, 184);
+    --lightTurqoise: rgb(127, 176, 195);
+    --white : rgb(253, 246, 246);
+    --lightGray: rgb(236, 232, 232);
+    --pink: rgb(226, 110, 191);
+    --purple: rgb(166, 23, 166);
+    
+}
+
 body{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: rgb(205, 230, 230);
+    background-color: var(--background);
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 h1{
     text-align: center;
-    color: rgb(222, 142, 142);
+    color: var(--gray);
+}
+
+input,button{
+    background-color: none;
+    appearance: none;
+    border:none;
+    outline: none;
 }
 
 #new-task-form{
@@ -17,18 +36,33 @@ h1{
 
 #new-task-input{
    margin: 0px 10px 0px 10px;
-   border-radius: 0%;
+   border-radius: 1rem;
    border: none;
-   color:white;
-   background-color: rgb(7, 119, 167);
+   color: var(--white);
+   background-color: var(--lightTurqoise);
    height: 3em;
    width: 20em;
 
 }
 
-::placeholder{
-    color: rgb(187, 194, 200);
+#new-task-input::placeholder{
+    color: var(--lightGray);
 }
+
+#new-task-submit{
+    color: var(--pink);
+    font-weight: 800;
+    background-image: linear-gradient(to right, var(--pink),var(--purple));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+#new-task-submit:hover{
+    background-image: none;
+}
+
 
 section.task-list{
     
