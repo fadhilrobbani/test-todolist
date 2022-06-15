@@ -1,11 +1,14 @@
 :root{
-    --background: rgb(61, 78, 91);
+    --background: rgb(70, 70, 70);
     --gray:rgb(184, 184, 184);
-    --lightTurqoise: rgb(127, 176, 195);
+    --lightTurqoise: rgb(104, 14, 125);
     --white : rgb(253, 246, 246);
     --lightGray: rgb(236, 232, 232);
     --pink: rgb(226, 110, 191);
     --purple: rgb(166, 23, 166);
+    --darkGray: rgb(45, 45, 45);
+    --red: rgb(205, 11, 11);
+    --blue:rgb(93, 93, 160);
     
 }
 
@@ -17,9 +20,18 @@ body{
     font-family: Arial, Helvetica, sans-serif;
 }
 
+header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color:var(--darkGray);
+
+}
+
 h1{
     text-align: center;
     color: var(--gray);
+    margin: 20px 0px 0px 0px;
 }
 
 input,button{
@@ -32,10 +44,11 @@ input,button{
 #new-task-form{
     display: flex;
     justify-content: center;
+    margin: 20px 0px 30px 0px;
 }
 
 #new-task-input{
-   margin: 0px 10px 0px 10px;
+   margin: 0px;
    border-radius: 1rem;
    border: none;
    color: var(--white);
@@ -47,6 +60,7 @@ input,button{
 
 #new-task-input::placeholder{
     color: var(--lightGray);
+    
 }
 
 #new-task-submit{
@@ -60,10 +74,61 @@ input,button{
 }
 
 #new-task-submit:hover{
-    background-image: none;
+    background-image: linear-gradient(to right, var(--purple),var(--white));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
+h2{
+    color: var(--lightGray);
+}
 
-section.task-list{
+section.task-list h2{
+   text-align: center;
+}
+
+#task .task{
+    background-color: var(--darkGray);
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    margin: 1rem;
+    border-radius: 1rem;
+}
+
+.content .text{
+    font-weight: 900;
     
+    width: 20em;
+    height: 2em;
+    color: var(--gray);
+    background: none;
+}
+
+.actions button{
+    height: 2em;
+    font-weight: 900;
+    background: none;
+    background-image: linear-gradient(to right, var(--pink),var(--blue));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    cursor: pointer;
+}
+
+.actions button:hover{
+    background-image: linear-gradient(to right, var(--blue),var(--white));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.actions button.delete{
+    background-image: linear-gradient(to right, var(--pink),var(--red));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.actions button.delete:hover{
+    background-image: linear-gradient(to right, var(--red),var(--white));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
